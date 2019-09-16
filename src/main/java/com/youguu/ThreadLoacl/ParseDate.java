@@ -11,7 +11,7 @@ public class ParseDate implements Runnable{
 
     static ThreadLocal<SimpleDateFormat> threadLocal = new ThreadLocal<SimpleDateFormat>(){
 
-        protected void finalize() throws Throwable{
+        protected void finalize() {
             System.out.println("first的"+this.toString()+" ,is gc");
         }
     };
@@ -31,7 +31,7 @@ public class ParseDate implements Runnable{
 
             if(threadLocal.get() == null){
                 threadLocal.set(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"){
-                    protected void finalize() throws Throwable{
+                    protected void finalize() {
                         System.out.println("second的"+this.toString()+" ,is gc");
                     }
                 });

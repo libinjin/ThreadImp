@@ -7,7 +7,7 @@ public class MyThread2 extends Thread{
     @Override
     public synchronized void run() {
         count--;
-        System.out.println("由"+this.currentThread().getName()+"计算出count："+count);
+        System.out.println("由"+ currentThread().getName()+"计算出count："+count);
     }
 
     public static void main(String[] args) {

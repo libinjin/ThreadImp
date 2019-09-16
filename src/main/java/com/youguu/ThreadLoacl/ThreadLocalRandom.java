@@ -43,7 +43,7 @@ public class ThreadLocalRandom {
         }
 
         @Override
-        public Long call() throws Exception {
+        public Long call() {
 
             long b = System.currentTimeMillis();
 

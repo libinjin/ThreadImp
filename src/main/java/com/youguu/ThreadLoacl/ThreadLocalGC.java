@@ -15,7 +15,7 @@ public class ThreadLocalGC {
 
     static ThreadLocal<SimpleDateFormat> tl = new ThreadLocal<SimpleDateFormat>(){
 
-        protected void finalize() throws Throwable{
+        protected void finalize() {
             System.out.println(this.toString()+"is gc");
         }
     };
@@ -33,7 +33,7 @@ public class ThreadLocalGC {
             try {
                 if(tl.get() == null){
                     tl.set(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"){
-                        protected void finalize() throws Throwable{
+                        protected void finalize() {
                             System.out.println(this.toString()+"is gc");
                         }
                     });

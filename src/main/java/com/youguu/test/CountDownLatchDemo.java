@@ -6,7 +6,7 @@ import java.util.concurrent.Executors;
 
 public class CountDownLatchDemo {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
 
         ExecutorService pool = Executors.newCachedThreadPool();

@@ -33,7 +33,7 @@ public class Student {
         System.out.println("no:"+no+" ,name:"+name);
     }
 
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
         //通过字节码文件对应的堆中的对象
 
         //方式一：

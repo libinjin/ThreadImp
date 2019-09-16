@@ -7,7 +7,7 @@ import java.util.concurrent.Semaphore;
 public class SemphoreDemo {
 
     private static Semaphore semaphore = new Semaphore(1);
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
 
 

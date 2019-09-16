@@ -1,5 +1,6 @@
 package com.youguu.meite;
 
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -7,6 +8,12 @@ import java.util.concurrent.locks.ReentrantLock;
 public class OutInputLockThread {
 
     public static void main(String[] args) {
+
+
+        ConcurrentLinkedQueue queue = new ConcurrentLinkedQueue();
+
+        queue.add(1);
+
         ResBean resBean = new ResBean();
         WriteLock write = new WriteLock(resBean);
         ReadLock read = new ReadLock(resBean);

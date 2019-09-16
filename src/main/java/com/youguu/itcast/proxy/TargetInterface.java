@@ -2,10 +2,10 @@ package com.youguu.itcast.proxy;
 
 public interface TargetInterface {
 
-    public void method();
+    void method();
 
-    public String method2();
+    String method2();
 
-    public int method3(int x);
+    int method3(int x);
 
 }

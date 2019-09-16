@@ -15,7 +15,7 @@ public class MyThread extends Thread{
 
         while (count > 0 ){
             count--;
-            System.out.println("由"+this.currentThread().getName()+"计算出count："+count);
+            System.out.println("由"+ currentThread().getName()+"计算出count："+count);
         }
     }
 
