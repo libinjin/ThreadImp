@@ -18,21 +18,20 @@ public class Cach {
 
     public static CountDownLatch getSingleCount() {
 
-        synchronized (Cach.class) {//静态方法使用的同步锁用——类名.class
-            if (latch == null || latch.getCount() == 0) {// 这样的写法在线程中会造成异常，多个线程同时执行创建对象，所以外边加锁，一次只能一个线程进来
+        //静态方法使用的同步锁用——类名.class
+        if (latch == null || latch.getCount() == 0) {// 这样的写法在线程中会造成异常，多个线程同时执行创建对象，所以外边加锁，一次只能一个线程进来
 
-                synchronized (Cach.class){
-                    if(latch == null || latch.getCount() == 0){
-                        latch = new CountDownLatch(1);
-                        return latch;
-                    }else {
-                        return latch;
-                    }
+            synchronized (Cach.class){
+                if(latch == null || latch.getCount() == 0){
+                    latch = new CountDownLatch(1);
+                    return latch;
+                }else {
+                    return latch;
                 }
-
-            } else {
-                return latch;
             }
+
+        } else {
+            return latch;
         }
     }
 

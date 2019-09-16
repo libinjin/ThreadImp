@@ -1,5 +1,7 @@
 package com.youguu.test;
 
+import com.youguu.Thread.ThreadEunm;
+
 public class Another {
 
     public void get() throws InterruptedException {
@@ -11,5 +13,6 @@ public class Another {
         Cach.getSingleCount().countDown();
         Cach.flag = false;
 
+        ThreadEunm.NEW.getIndex();
     }
 }
