@@ -40,7 +40,7 @@ public class ParseDate implements Runnable{
             SimpleDateFormat sdf = threadLocal.get();
             Date date = sdf.parse("2019-09-10 23:17:"+i%60);
 
-            //System.out.println(i+":"+date);
+            System.out.println(i+":"+date);
         } catch (ParseException e) {
             e.printStackTrace();
         }finally {

@@ -1,9 +1,10 @@
-package com.youguu.test;
+package com.youguu.future.test;
+
+import com.youguu.test.TechniStock;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
@@ -13,6 +14,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+/**
+ * future练习
+ */
 public class WriteTest {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -33,16 +37,16 @@ public class WriteTest {
 
         long start = System.currentTimeMillis();
 
+        //提交完成后，主线程可以做其他事情
         Future<Map<Integer, TechniStock>> future = service.submit(new Receive(list1, map));
-
-        map =  future.get();
 
         Future<Map<Integer, TechniStock>> future2 = service.submit(new Receive(list2, map));
 
-        map = future2.get();
 
         Future<Map<Integer, TechniStock>> future3 = service.submit(new Receive(list3, map));
 
+        map =  future.get();//会阻塞，等待方法执行完毕，拿到返回值，类似于阿Ajax，异步的
+        map = future2.get();
         map = future3.get();
 
         System.out.println(future.isDone());
