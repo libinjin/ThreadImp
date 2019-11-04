@@ -7,19 +7,24 @@ public class ThreadStop {
 
 
     public static void main(String[] args) throws InterruptedException {
-        StopDemo stopDemo = new StopDemo();
+
+        for (int i = 0; i < Integer.MAX_VALUE; i++) {
+            Thread.sleep(1000);
+            System.out.println("休息一秒");
+        }
+        /*StopDemo stopDemo = new StopDemo();
         stopDemo.start();
 
         for (int i = 0; i < 6; i++) {
             System.out.println("我是主线程："+i);
             Thread.sleep(1000);
 
-            if(i == 5){
+            if(i == 1){
                 //让线程抛出异常
                 stopDemo.interrupt();
                 //stopDemo.stopThread();
             }
-        }
+        }*/
     }
 
 }
@@ -44,6 +49,13 @@ class StopDemo extends Thread{
 
             } catch (InterruptedException e) {
                 //e.printStackTrace();
+
+                /**
+                 * 第一次调用interrupt，并没有中断正在运行的线程，
+                 * 它只是要求线程在自己合适的时机中断自己，
+                 * 对正常运行的线程调用interrupt()并不能终止他，只是改变了interrupt标示符
+                 *
+                 */
                 stopThread();
             }
         }

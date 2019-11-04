@@ -44,8 +44,8 @@ public class ProxyTest {
 //        targetInterface.method();
         String str = targetInterface.method2();
         int me = targetInterface.method3(8);
-        System.out.println(str);
-        System.out.println(me);
+        System.out.println("li:"+str);
+        System.out.println("li:"+me);
 
         //方式二：
         final TargetInterfaceImp target = new TargetInterfaceImp();

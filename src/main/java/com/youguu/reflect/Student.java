@@ -108,6 +108,8 @@ public class Student {
         Constructor cr2 = cls.getDeclaredConstructor(int.class, String.class);
 
         cr2.newInstance(1, "sir Li");//调用有参
+
+
     }
 
 }

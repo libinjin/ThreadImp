@@ -38,6 +38,8 @@ public class MyQueueLength {
             thread.start();
         }
         Thread.sleep(2000);
+        System.out.println(queueLength.lock.hasQueuedThreads());
+        System.out.println("已经有"+queueLength.lock.getHoldCount()+"线程持有锁");
         System.out.println("正在等待获取锁的线程数有："+queueLength.lock.getQueueLength());
     }
 
