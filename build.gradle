@@ -15,5 +15,24 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     // https://mvnrepository.com/artifact/org.javassist/javassist
     compile group: 'org.javassist', name: 'javassist', version: '3.26.0-GA'
+// https://mvnrepository.com/artifact/cglib/cglib
+    compile group: 'cglib', name: 'cglib', version: '3.2.5'
+
+    // https://mvnrepository.com/artifact/dom4j/dom4j
+    compile 'dom4j:dom4j:1.6.1'
+
+    compile 'commons-lang:commons-lang:2.6'
+
+    /** Spring **/
+    compile 'org.aspectj:aspectjweaver:1.8.5'
+    compile 'org.springframework:spring-aop:4.3.10.RELEASE'
+    compile 'org.springframework:spring-beans:4.3.10.RELEASE'
+    compile 'org.springframework:spring-context:4.3.10.RELEASE'
+    compile 'org.springframework:spring-context-support:4.3.10.RELEASE'
+    compile 'org.springframework:spring-core:4.3.10.RELEASE'
+    compile 'org.springframework:spring-expression:4.3.10.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.3.10.RELEASE'
+    compile 'org.springframework:spring-orm:4.3.10.RELEASE'
+    compile 'org.springframework:spring-tx:4.3.10.RELEASE'
 
 }

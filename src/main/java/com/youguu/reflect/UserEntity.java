@@ -30,6 +30,7 @@ public class UserEntity {
 
         //使用java的反射机制来创建对象,拿到当前实现类的class文件
         Class cls = Class.forName("com.youguu.reflect.UserEntity");
+
         //使用反射机制创建对象
         UserEntity entity = (UserEntity) cls.newInstance();
         entity.userName = "蚂蚁课堂";
