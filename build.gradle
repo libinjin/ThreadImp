@@ -35,4 +35,9 @@ dependencies {
     compile 'org.springframework:spring-orm:4.3.10.RELEASE'
     compile 'org.springframework:spring-tx:4.3.10.RELEASE'
 
+
+    /** mybatis **/
+    compile 'org.mybatis:mybatis:3.2.3'
+    compile 'org.mybatis:mybatis-spring:1.2.2'
+    compile 'mysql:mysql-connector-java:5.1.34'
 }

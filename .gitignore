@@ -16,3 +16,8 @@ out
 dist
 release
 bin
+java_pid1180.hprof
+java_pid21544.hprof
+java_pid24388.hprof
+java_pid2968.hprof
+src/test/

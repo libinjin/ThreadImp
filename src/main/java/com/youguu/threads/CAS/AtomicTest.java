@@ -32,6 +32,6 @@ public class AtomicTest {
             thread[i].join();
         }
 
-        System.out.println(atomicInteger);
+        System.out.println("num:"+atomicInteger);
     }
 }

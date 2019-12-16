@@ -26,7 +26,7 @@ public class ProxyTest {
         //TargetInterfaceImp.class;
 
         //方式一：
-        TargetInterface targetInterface =
+     /*   TargetInterface targetInterface =
                 (TargetInterface) Proxy.newProxyInstance(
                         TargetInterface.class.getClassLoader(),//与目标对象相同的类加载器
                         new Class[]{TargetInterface.class},//要接口的字节码对象
@@ -45,7 +45,7 @@ public class ProxyTest {
         String str = targetInterface.method2();
         int me = targetInterface.method3(8);
         System.out.println("li:"+str);
-        System.out.println("li:"+me);
+        System.out.println("li:"+me);*/
 
         //方式二：
         final TargetInterfaceImp target = new TargetInterfaceImp();
@@ -67,6 +67,7 @@ public class ProxyTest {
                          * 反射执行
                          */
                         //Object[] args = new Object[]{50}; 这里的args可以修改实际传入的参数
+                        System.out.println("加入AOP");
                         method.getName();//获得目标对象的名称
                         System.out.println("method.getName():"+method.getName());
                         Object object = method.invoke(target, args);

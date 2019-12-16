@@ -3,6 +3,7 @@ package com.youguu.itcast.proxy.impl;
 
 import com.youguu.itcast.proxy.TargetInterface;
 
+
 public class TargetInterfaceImp implements TargetInterface {
 
     @Override
